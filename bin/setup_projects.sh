@@ -13,9 +13,9 @@ USER=$2
 FROM_JENKINS=$3
 
 echo "Creating Homework Projects for GUID=${GUID} and USER=${USER}"
-oc new-project ${GUID}-jenkins    --display-name="${GUID} AdvDev Homework Jenkins"
-oc new-project ${GUID}-tasks-dev  --display-name="${GUID} AdvDev Homework Tasks Development"
-oc new-project ${GUID}-tasks-prod --display-name="${GUID} AdvDev Homework Tasks Production"
+#oc new-project ${GUID}-jenkins    --display-name="${GUID} AdvDev Homework Jenkins"
+#oc new-project ${GUID}-tasks-dev  --display-name="${GUID} AdvDev Homework Tasks Development"
+#oc new-project ${GUID}-tasks-prod --display-name="${GUID} AdvDev Homework Tasks Production"
 
 if [ "$FROM_JENKINS" = "true" ]; then
   oc policy add-role-to-user admin ${USER} -n ${GUID}-jenkins
